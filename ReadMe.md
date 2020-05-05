@@ -1,5 +1,3 @@
-*WARNING!* This project currently builds but has an unresolved bug.
-
 # About
 
 dtls-minimal is a simple example of how to setup a service that

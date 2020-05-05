@@ -236,7 +236,7 @@ int main(int argc, char** argv) {
     coap_set_app_data(ctx, &running);
 
     /* Create the endpoint. */
-    coap_endpoint_t* endpoint = coap_new_endpoint(ctx, &dst, COAP_PROTO_UDP);
+    coap_endpoint_t* endpoint = coap_new_endpoint(ctx, &dst, COAP_PROTO_DTLS);
     if (!endpoint) {
         coapLog(LOG_EMERG, "cannot initialize endpoint\n");
         coap_free_context(ctx);
