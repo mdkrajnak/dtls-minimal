@@ -25,7 +25,7 @@ static void usage() {
     printf("    -h            Print help and exit.\n");
     printf("    -a <address>  Bind coap to the specified network address, default localhost.\n");
     printf("    -p <port>     Bind coap to the specified port, default 5684,\n");
-    printf("    -c <certfile> A self signed certificate for securing the DTLS connection\n");:wq
+    printf("    -c <certfile> A self signed certificate for securing the DTLS connection\n");
 }
 
 static int getopts(int argc, char** argv, const char** address, const char** port, const char** certfile) {
@@ -193,7 +193,7 @@ static coap_dtls_pki_t* setup_pki_parameters(coap_dtls_pki_t* dtls_pki, const ch
  * @return
  */
 int main(int argc, char** argv) {
-    coap_dtls_pki_t dtls_pki;
+    static coap_dtls_pki_t dtls_pki;
     coap_address_t dst;
     bool running = true;
     const char* address = "localhost";
